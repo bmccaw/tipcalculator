@@ -13,12 +13,12 @@
 		How much is your bill?
 		<input type="text" id="bill-val" placeholder="Bill Amount">
 		What percentage would you like to tip?
-		<select>
+		<select id="tip-percent">
+			<option disabled selected value="0">Choose a percentage</option>
 			<option value="0.20">20%</option>
 			<option value="0.15">15%</option>
 			<option value="0.10">10%</option>
 			<option value="0.05">5%</option>
-
 		</select>
 		How many people are in your group?
 		<input type="text" id="num-patrons" placeholder="Number of People">
@@ -26,7 +26,7 @@
 	<button type="button" id="calc-tip">Calculate Tip!</button>
 	</div>
 	<div id="result">
-		
+		$<span id="tip-amount">0.00</span> per person.
 	</div>
 </body>
 <script type="text/javascript" src="assets/js/app.js"></script>
