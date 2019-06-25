@@ -25,8 +25,9 @@ const calculateTip = () => {
 	total = Math.round(total * 100) / 100;
 	console.log(total);
 
-}
+	document.querySelector(`#tip-amount`).innerHTML = total;
 
+}
 
 document.querySelector(`#calc-tip`).addEventListener("click", event => {
 	calculateTip()
