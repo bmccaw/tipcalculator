@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
+	
+
+const calculateTip = () => {
+	
 	//define variables
 	const billVal = document.querySelector(`#bill-val`).value;
 	const tipPercent = document.querySelector(`#tip-percent`).value;
 	const numPatrons = document.querySelector(`#num-patrons`).value;
-
-const calculateTip = () => {
-	
 
 	console.log(billVal);
 	console.log(tipPercent);
@@ -19,14 +20,15 @@ const calculateTip = () => {
 	}
 
 	//calculate the tip
-	const total = (billVal * tipPercent) / numPatrons;
+	let total = (billVal * tipPercent) / numPatrons;
+	console.log(total);
+	total = Math.round(total * 100) / 100;
+	console.log(total);
+
 }
-console.log(billVal);
-	console.log(tipPercent);
-	console.log(numPatrons);
+
 
 document.querySelector(`#calc-tip`).addEventListener("click", event => {
 	calculateTip()
 })
-
 });
