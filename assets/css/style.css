@@ -1,0 +1,23 @@
+#container {
+	background: grey;
+	width: 50%;
+	margin:auto;
+	border: solid black;
+	padding:10px;
+	font-family: 'Bitter', serif;
+}
+#calculator {
+	display: block;
+	margin:auto;
+}
+#calc-tip {
+	margin:10px;
+	margin-left:0px;
+}
+h1 {
+	margin-top:0px;
+}
+
+#result {
+	visibility:hidden;
+}
