@@ -24,9 +24,13 @@ document.addEventListener("DOMContentLoaded", event => {
 
     //calculate the tip
     let total = (billVal * tipPercent) / numPatrons;
-    console.log(total);
+	console.log(total);
+	//round the total to the nearest two decimal places
     total = Math.round(total * 100) / 100;
-    console.log(total);
+	console.log(total);
+	//insure that the result always has two digits following the decimal point
+	total = total.toFixed(2);
+	console.log(total);
 
     //display the result
 	document.querySelector(`#tip-amount`).innerHTML = total;
