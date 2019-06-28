@@ -13,6 +13,7 @@
 #calc-tip {
 	margin:10px;
 	margin-left:0px;
+	background:whitesmoke;
 }
 h1 {
 	margin-top:0px;
@@ -20,4 +21,8 @@ h1 {
 }
 #result {
 	visibility:hidden;
+}
+#err-bill, #err-percent, #err-patron {
+	color:red;
+	visibility: hidden;
 }
