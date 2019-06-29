@@ -11,15 +11,10 @@ document.addEventListener("DOMContentLoaded", event => {
     console.log(numPatrons);
 
     //validate inputs
-    if (billVal === "") {
+    if (billVal === "" || regex.test(billVal) == false) {
 		document.querySelector(`#err-bill`).style.visibility = "visible";
 	}
 	
-	//regex check to insure billVal can only be a number with one decimal point
-    else if (regex.test(billVal) == false) {
-		document.querySelector(`#err-bill`).style.visibility = "visible";
-    }
-
 	else if (tipPercent == 0) {
 		document.querySelector(`#err-percent`).style.visibility = "visible";
     }
@@ -42,6 +37,7 @@ document.addEventListener("DOMContentLoaded", event => {
     //display the result
     document.querySelector(`#tip-amount`).innerHTML = total;
 	document.querySelector(`#result`).style.visibility = "visible";
+	//hide any previous error messages
 	document.querySelector(`#err-bill`).style.visibility = "hidden";
 	document.querySelector(`#err-percent`).style.visibility = "hidden";
 	document.querySelector(`#err-patron`).style.visibility = "hidden";

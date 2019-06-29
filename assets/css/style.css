@@ -25,4 +25,5 @@ h1 {
 #err-bill, #err-percent, #err-patron {
 	color:red;
 	visibility: hidden;
+	margin-top:10px;
 }
